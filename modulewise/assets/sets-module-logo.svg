@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Square background -->
+  <rect x="10" y="10" width="180" height="180" rx="10" fill="#ffffff" />
+  
+  <!-- Venn diagram representing sets -->
+  <circle cx="85" cy="100" r="55" fill="#4285f4" fill-opacity="0.6" />
+  <circle cx="115" cy="100" r="55" fill="#34a853" fill-opacity="0.6" />
+  
+  <!-- Set elements (dots) in various regions -->
+  <!-- Left circle only -->
+  <circle cx="50" cy="100" r="5" fill="#1a73e8" />
+  <circle cx="60" cy="80" r="5" fill="#1a73e8" />
+  <circle cx="65" cy="120" r="5" fill="#1a73e8" />
+  
+  <!-- Right circle only -->
+  <circle cx="150" cy="100" r="5" fill="#0f9d58" />
+  <circle cx="140" cy="80" r="5" fill="#0f9d58" />
+  <circle cx="135" cy="120" r="5" fill="#0f9d58" />
+  
+  <!-- Intersection -->
+  <circle cx="100" cy="85" r="5" fill="#aa00ff" />
+  <circle cx="100" cy="100" r="5" fill="#aa00ff" />
+  <circle cx="100" cy="115" r="5" fill="#aa00ff" />
+  
+  <!-- Connection lines -->
+  <line x1="50" y1="100" x2="60" y2="80" stroke="#1a73e8" stroke-width="2" />
+  <line x1="60" y1="80" x2="65" y2="120" stroke="#1a73e8" stroke-width="2" />
+  <line x1="65" y1="120" x2="50" y2="100" stroke="#1a73e8" stroke-width="2" />
+  
+  <line x1="150" y1="100" x2="140" y2="80" stroke="#0f9d58" stroke-width="2" />
+  <line x1="140" y1="80" x2="135" y2="120" stroke="#0f9d58" stroke-width="2" />
+  <line x1="135" y1="120" x2="150" y2="100" stroke="#0f9d58" stroke-width="2" />
+  
+  <line x1="100" y1="85" x2="100" y2="100" stroke="#aa00ff" stroke-width="2" />
+  <line x1="100" y1="100" x2="100" y2="115" stroke="#aa00ff" stroke-width="2" />
+  <line x1="100" y1="115" x2="100" y2="85" stroke="#aa00ff" stroke-width="2" />
+</svg>

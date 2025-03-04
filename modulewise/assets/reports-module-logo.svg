@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Square background -->
+  <rect x="10" y="10" width="180" height="180" rx="10" fill="#ffffff" />
+  
+  <!-- Document stack -->
+  <rect x="55" y="50" width="90" height="110" rx="5" fill="#ffffff" stroke="#4a6fa5" stroke-width="3" />
+  <rect x="60" y="45" width="90" height="110" rx="5" fill="#ffffff" stroke="#4a6fa5" stroke-width="3" />
+  <rect x="65" y="40" width="90" height="110" rx="5" fill="#ffffff" stroke="#4a6fa5" stroke-width="3" />
+  
+  <!-- Chart elements -->
+  <rect x="80" y="70" width="15" height="50" fill="#5a8dd6" />
+  <rect x="105" y="60" width="15" height="60" fill="#3c6cb4" />
+  <rect x="130" y="80" width="15" height="40" fill="#2a4d82" />
+  
+  <!-- Line graph element -->
+  <polyline points="80,140 95,125 110,130 125,115 140,105" stroke="#e74c3c" stroke-width="3" fill="none" />
+  
+  <!-- Data dots -->
+  <circle cx="80" cy="140" r="3" fill="#e74c3c" />
+  <circle cx="95" cy="125" r="3" fill="#e74c3c" />
+  <circle cx="110" cy="130" r="3" fill="#e74c3c" />
+  <circle cx="125" cy="115" r="3" fill="#e74c3c" />
+  <circle cx="140" cy="105" r="3" fill="#e74c3c" />
+</svg>
