@@ -4,294 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestCases</title>
-    <script src="./assets/tailwind.css"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <title>Test case manageent app</title>
+    <script src="./assets/tailwind.js"></script>
+    <link rel="shortcut icon" href="./assets/case-module-logo.svg" type="image/x-icon">
 </head>
 
-<body class="bg-gray-100">
-    <div class="w-full h-full">
-        <div class="w-full h-16 grid grid-cols-4 bg-white shadow-md text-center">
-            <div class="col-start-1 col-end-2 text-white flex justify-start ml-3 text-center">
-                <button id="toggleBtn" class="text-black px-3 py-2 rounded">
-                    <i class="fa-solid fa-bars"></i> </button>
-                <img src="./assets/logo.svg" height="120px" width="200px" alt="" srcset="">
-            </div>
-            <div
-                class="text-white flex relative inline-block justify-end items-center ml-3 text-center col-start-4 mr-4 col-end-4">
-                <div class="relative inline-block">
-                    <!-- Button -->
-                    <button id="dropdownButton" class="text-white px-4 py-2 rounded cursor-pointer">
-                        <img src="./assets/profile.jpg" alt="Profile" class="h-10 w-10 rounded-full cursor-pointer">
-                    </button>
-
-                    <!-- Dropdown Box -->
-                    <div id="dropdownMenu"
-                        class="absolute bg-white right-0 mt-2 w-48 border border-gray-300 rounded shadow-lg p-2 z-30 hidden">
-                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200"><i class="fas fa-user"></i>
-                            <span>
-                                Profile
-                            </span>
-                        </a>
-                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200">
-                            <i class="fas fa-cog"></i><span>
-                                Settings
-                            </span>
-                        </a>
-                        <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200"><i
-                                class="fas fa-sign-out-alt"></i>
-                            <span>
-                                Sign Out
-                            </span>
-                        </a>
+<body >
+    <div class="w-screen h-screen bg-[url('../assets/background-light.svg')] bg-cover">
+        <header class="w-full">
+            <nav class="bg-transparent">
+                <div class="flex justify-end items-end w-full" id="dropdownOption">
+                    <div class="flex mr-4 gap-4 mt-2 cursor-pointer">
+                        <span class="mt-1">
+                            User Demo
+                        </span>
+                        <img src="./user.webp" width="30px" alt="Not image">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="flex">
-        <div id="sidebar"
-            class="w-72 h-screen bg-white shadow-md border border-gray-300 text-black p-4 transition-transform rounded">
-            <ul class="space-y-5">
-                <li class="py-2 hover:bg-gray-200 px-2 rounded">
-                    <a href="./dashboard.html" class="ml-3">
-                        <i class="fas fa-tachometer-alt"></i>
+                <div id="dropdownMenu"
+                    class="absolute bg-white right-2 mt-2 w-48 border border-gray-300 rounded shadow-md p-2 z-30 hidden">
+                    <a href="#" class="block px-4 py-1 text-black hover:bg-gray-200"><i class="fas fa-user"></i>
+                        <span>
+                            Profile
+                        </span>
+                    </a>
+                    <a href="#" class="block px-4 py-1 text-black hover:bg-gray-200"><i class="fas fa-sign-out-alt"></i>
+                        <span>
+                            Sign Out
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <div class="overflow-y-auto w-full flex flex-wrap justify-center mt-12">
+            <a class="item w-[140px] h-[140px] rounded bg-transparent flex justify-center items-center cursor-pointer"
+                href="./module.html">
+                <div class="w-[140px] h-[120px] text-center hover:mb-2">
+                    <img src="./assets/dashboard-icon.svg" class="w-32 h-20 rounded mx-auto" alt="">
+                    <span class="text-center font-custom">
                         Dashboard
-                    </a>
-                </li>
-                <li class="py-2 hover:bg-gray-200 px-2 rounded">
-                    <a href="./index.html" class="ml-3">
-                        <i class="fas fa-clipboard"></i> Cases
-                    </a>
-                </li>
-                <li class="py-2 hover:bg-gray-200 px-2 rounded">
-                    <a href="./index.html" class="ml-3">
-                        <i class="fas fa-layer-group"></i> Sets
-                    </a>
-                </li>
-                <li class="py-2 hover:bg-gray-200 px-2 rounded">
-                    <a href="./index.html" class="ml-3">
-                        <i class="far fa-clock"></i>
-                        Cycles
-                    </a>
-                </li>
-                <li class="py-2 hover:bg-gray-200 px-2 rounded">
-                    <a href="./index.html" class="ml-3">
-                        <i class="fas fa-file-alt"></i> Reports
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div
-            class="w-screen h-screen overflow-y-auto no-scrollbar shadow-md bg-gray-200 border border-black-300 rounded">
-            <div class="w-full mt-2 overflow-x-auto flex h-[80px] shadow-md bg-white border border-black-300 rounded">
-                <div class="flex ml-5 items-center justify-center">
-                    <h1 class="text-3xl font-bold text-gray-800">Module</h1>
+                    </span>
                 </div>
-                <div class="flex items-center justify-end w-full mr-2 ml-2">
-                    <a href="./form.html" class="px-4 py-2 bg-blue-500 text-white rounded">
-                        Create
-                    </a>
+            </a>
+            <a class="item w-[140px] h-[140px] rounded bg-transparent flex justify-center items-center cursor-pointer"
+                href="./module.html">
+                <div class="w-[140px] h-[120px] text-center hover:mb-2">
+                    <img src="./assets/reports-module-logo.svg" class="w-32 h-20 mx-auto" alt="">
+                    <span class="text-center font-custom">
+                        Report
+                    </span>
                 </div>
-            </div>
-            <div class="w-full mt-2 overflow-x-auto flex h-[80px] shadow-md bg-white border border-black-300 rounded">
-                <div class="flex ml-4 items-center justify-center">
-                    <button class="px-4 py-2 bg-blue-500 text-white rounded">
-                        Folders
-                        <i class="fa-solid fa-folder-open"></i>
-                    </button>
+            </a>
+            <a class="item w-[140px] h-[140px] rounded bg-transparent flex justify-center items-center cursor-pointer"
+                href="./module.html">
+                <div class="w-[140px]  h-[120px] text-center hover:mb-2">
+                    <img src="./assets/sets-module-logo.svg" class="w-32 h-20 mx-auto" alt="">
+                    <span class="text-center font-custom">
+                        Set
+                    </span>
                 </div>
-                <div class="flex items-center justify-end w-full mr-2 ml-2 gap-2">
-                    <button
-                        class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100">
-                        <span class="text-gray-600">Add</span>
-                    </button>
-                    <div class="relative flex items-center w-80 border border-gray-300 rounded-md px-3 py-2 bg-white">
-                        <i class="fas fa-search text-gray-400"></i>
-                        <input type="text" placeholder="Search by Test Case ID or Title"
-                            class="ml-2 w-full outline-none text-gray-600 placeholder-gray-400 bg-white" />
-                    </div>
-
-                    <button
-                        class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100">
-                        <i class="fas fa-filter text-gray-600"></i>
-                        <span class="text-gray-600">Filter</span>
-                    </button>
+            </a>
+            <a class="item w-[140px] h-[140px] rounded bg-transparent flex justify-center items-center cursor-pointer"
+                href="./module.html">
+                <div class="w-[140px]  h-[120px] text-center hover:mb-2">
+                    <img src="./assets/case-module-logo.svg" class="w-32 h-20 mx-auto" alt="">
+                    <span class="text-center font-custom">
+                        Case
+                    </span>
                 </div>
-            </div>
-            <div
-                class="w-full h-screen flex flex-wrap mt-2 shadow-md bg-white border border-black-300 overflow-y-auto no-scrollbar">
-                <div class="w-[500px] md:w-full overflow-x-auto border border-black-300">
-                    <div class="bg-white rounded-lg shadow-md p-4 no-scrollbar overflow-x-auto">
-                        <div class="flex justify-between items-center pb-3  mb-3">
-                            <h2 class="text-lg font-semibold text-gray-700">Total Test Cases</h2>
-                            <span class="font-semibold text-gray-700">7</span>
-                        </div>
-
-                        <!-- Folder structure -->
-                        <div class="space-y-2">
-                            <!-- Main folder (expanded) -->
-                            <div class="folder-item rounded-md hover:bg-blue-50 transition duration-150 bg-blue-50">
-                                <div class="flex items-center justify-between p-3 cursor-pointer">
-                                    <div class="flex items-center">
-                                        <i class="fa-solid fa-chevron-down text-blue-500 mr-2"></i>
-                                        <i class="fa-solid fa-folder-open text-blue-500 mr-2"></i>
-                                        <span class="font-medium">New test</span>
-                                    </div>
-                                    <span class="text-gray-600">7(7)</span>
-                                </div>
-                            </div>
-
-                            <!-- Subfolder (indented) -->
-                            <div class="folder-item rounded-md hover:bg-blue-50 transition duration-150 ml-8">
-                                <div class="flex items-center justify-between p-3 cursor-pointer">
-                                    <div class="flex items-center">
-                                        <i class="fa-solid fa-folder text-blue-500 mr-2"></i>
-                                        <span>Test case</span>
-                                    </div>
-                                    <span class="text-gray-600">0(0)</span>
-                                </div>
-                            </div>
-
-                            <!-- Additional folders (collapsed by default) -->
-                            <div class="folder-item rounded-md hover:bg-blue-50 transition duration-150">
-                                <div class="flex items-center justify-between p-3 cursor-pointer">
-                                    <div class="flex items-center">
-                                        <i class="fa-solid fa-chevron-right text-blue-500 mr-2"></i>
-                                        <i class="fa-solid fa-folder text-blue-500 mr-2"></i>
-                                        <span class="font-medium">Regression tests</span>
-                                    </div>
-                                    <span class="text-gray-600">12(3)</span>
-                                </div>
-                            </div>
-
-                            <div class="folder-item rounded-md hover:bg-blue-50 transition duration-150">
-                                <div class="flex items-center justify-between p-3 cursor-pointer">
-                                    <div class="flex items-center">
-                                        <i class="fa-solid fa-chevron-right text-blue-500 mr-2"></i>
-                                        <i class="fa-solid fa-folder text-blue-500 mr-2"></i>
-                                        <span class="font-medium">Integration tests</span>
-                                    </div>
-                                    <span class="text-gray-600">5(2)</span>
-                                </div>
-                            </div>
-
-                            <div class="folder-item rounded-md hover:bg-blue-50 transition duration-150">
-                                <div class="flex items-center justify-between p-3 cursor-pointer">
-                                    <div class="flex items-center">
-                                        <i class="fa-solid fa-chevron-right text-blue-500 mr-2"></i>
-                                        <i class="fa-solid fa-folder text-blue-500 mr-2"></i>
-                                        <span class="font-medium">Performance tests</span>
-                                    </div>
-                                    <span class="text-gray-600">3(0)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Header section with count -->
-                    </div>
-                </div>
-                <div class="w-full border flex border-black-300 justify-center">
-                    <div class="overflow-x-auto flex h-[200px] mt-4 w-[600px]">
-                        <table class="w-full overflow-x-auto">
-                            <thead>
-                                <tr class="border-b bg-white">
-                                    <th class="px-6 py-3 text-left">
-                                        <div class="flex items-center space-x-1">
-                                            <span>Key</span>
-                                            <span class="text-gray-400">↑</span>
-                                        </div>
-                                    </th>
-                                    <th class="px-6 py-3 text-left">Version</th>
-                                    <th class="px-6 py-3 text-left">Title</th>
-                                    <th class="px-6 py-3 text-left">Owner</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                    <td>100</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div
-                    class="mt-8 w-full bg-white border-t border-gray-300 shadow-md p-3 gap-2 flex overflow-y-auto flex-wrap justify-center items-center">
-                    <!-- Dropdown for Total Records -->
-                    <div class="flex items-center space-x-2">
-                        <label for="records-per-page" class="text-gray-700 text-sm">Show:</label>
-                        <select id="records-per-page"
-                            class="border border-gray-300 text-gray-700 text-sm rounded px-2 py-1">
-                            <option value="10">10 records</option>
-                            <option value="25">25 records</option>
-                            <option value="50">50 records</option>
-                            <option value="100">100 records</option>
-                        </select>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="flex flex-wrap gap-2 items-center space-x-3">
-                        <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </button>
-                        <div class="flex space-x-1">
-                            <button class="px-3 py-1 bg-blue-500 text-white rounded">1</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">2</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">3</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">.</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">.</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">28</button>
-                        </div>
-                        <button class="px-3 py-1 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

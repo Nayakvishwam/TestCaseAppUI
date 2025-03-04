@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- White background -->
+  <rect width="100" height="100" fill="white"/>
+  
+  <!-- Dashboard grid representation -->
+  <rect x="10" y="10" width="35" height="35" fill="#3498db" rx="5"/>
+  <rect x="55" y="10" width="35" height="35" fill="#2ecc71" rx="5"/>
+  <rect x="10" y="55" width="35" height="35" fill="#e74c3c" rx="5"/>
+  <rect x="55" y="55" width="35" height="35" fill="#f39c12" rx="5"/>
+</svg>
