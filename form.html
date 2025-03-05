@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module page</title>
+    <link rel="shortcut icon" href="./assets/case-module-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="./assets/tailwind.js"></script>
+</head>
+
+<body>
+    <div class="w-screen h-screen shadow-md overflow-auto">
+        <header class="w-full">
+            <nav class="bg-transparent">
+                <div class="flex justify-end items-end w-full">
+                    <a href="./module.html" id="module"
+                        class="flex justify-start left-0 top-1 absolute cursor-pointer gap-2">
+                        <div class="item flex text-lg">
+                            <img src="./assets/case-module-logo.svg" id="modulelogo" class="w-12" alt="Not image" />
+                            <span class="mt-2">
+                                Module
+                            </span>
+                        </div>
+                    </a>
+                    <div class="flex mr-4 gap-4 mt-2 cursor-pointer" id="dropdownOption">
+                        <span class="mt-1">
+                            User Demo
+                        </span>
+                        <img src="./user.webp" width="30px" alt="Not image" />
+                    </div>
+                </div>
+                <div id="dropdownMenu"
+                    class="absolute bg-white right-2 mt-2 w-48 border border-gray-300 rounded shadow-md p-2 z-30 hidden">
+                    <a href="#" class="block px-4 py-1 text-black hover:bg-gray-200"><i class="fas fa-user"></i>
+                        <span>
+                            Profile
+                        </span>
+                    </a>
+                    <a href="#" class="block px-4 py-1 text-black hover:bg-gray-200"><i class="fas fa-sign-out-alt"></i>
+                        <span>
+                            Sign Out
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <div class="flex mt-10">
+            <div class="item flex gap-2 justify-start items-start w-[30%]">
+                <a href="./form.html" class="px-3 py-1 bg-purple-950 rounded text-white ml-4">New</a>
+                <a href="" class="px-3 py-1 bg-white-100 rounded  text-black ml-4"><i
+                        class="fa fa-cloud-upload fa-fw"></i></a>
+                <a href="./module.html" class="px-3 py-1 bg-white-100 rounded  text-black"><i
+                        class="fa fa-times fa-fw"></i></a>
+            </div>
+        </div>
+        <div class="border border-gray-300 w-full mt-5"></div>
+        <div class="flex flex-wrap gap-4">
+            <div class="bg-white border border-gray-300 mt-5 rounded shadow-md p-6 w-full md:w-[calc(60%-0.5rem)]">
+                <h1 class="text-4xl font-bold mb-6 text-gray-700">Create case</h1>
+                <form class="">
+                    <div class="flex flex-wrap">
+                        <input type="text" placeholder="Enter title"
+                            class="w-full border-b border-teal-500 outline-none p-4 text-gray-600 text-lg">
+                    </div>
+                    <div class="flex flex-wrap mt-4 gap-2">
+                        <span class="w-full md:w-[calc(50%-0.5rem)]">
+                            <textarea class="w-full border-b border-teal-500 outline-none p-4 text-gray-600 text-lg"
+                                placeholder="Enter description"></textarea>
+                        </span>
+                        <span class="w-full md:w-[calc(50%-0.5rem)]">
+                            <textarea class="w-full border-b border-teal-500 outline-none p-4 text-gray-600 text-lg"
+                                placeholder="Enter pre-conditions"></textarea>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div
+                class="bg-white border border-gray-300 mt-5 rounded shadow-md p-6 w-full md:w-[calc(40%-0.5rem)] overflow-y-auto">
+                <div class="flex ml-2">
+                    <div
+                        class="border  border-gray-300 bg-gray-200 text-center min-w-[150px] max-w-screen p-2 h-[40px] cursor-pointer">
+                        <div class="w-full">Attaches</div>
+                    </div>
+                    <div
+                        class="border border-gray-300 bg-gray-200 min-w-[150px] max-w-screen p-2 h-[40px] cursor-pointer">
+                        <div class="w-full">Jira requirements</div>
+                    </div>
+                </div>
+                <div class="border border-gray-300 w-full"></div>
+            </div>
+        </div>
+        <script>
+        document.getElementById("module")?.addEventListener("mouseenter", (event) => {
+            let modulelogo = document.getElementById("modulelogo");
+            let icon = document.createElement("i");
+            icon.className = "fas fa-chevron-left mt-3 mr-2 ml-2";
+            icon.id = "modulelogo";
+            modulelogo.replaceWith(icon);
+        });
+        document.getElementById("module")?.addEventListener("mouseleave", (event) => {
+            let image = document.createElement("img");
+            image.className = "w-12";
+            image.src = "../assets/case-module-logo.svg";
+            image.id = "modulelogo";
+            let icon = document.getElementById("modulelogo");
+            icon.replaceWith(image);
+        });
+        document.getElementById("editable-span")?.addEventListener("click", function () {
+            let span = this;
+            let input = document.createElement("input");
+            let spantext = span.textContent;
+            input.type = "text";
+            input.value = spantext;
+            input.className = "px-2 py-1 rounded w-[60px]";
+
+            span.replaceWith(input);
+            input.focus();
+
+            input.addEventListener("blur", function () {
+                span.textContent = spantext.trim();
+                input.replaceWith(span);
+            });
+
+            input.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    input.blur();
+                }
+            });
+        });
+
+        </script>
+        <script src="./assets/script.js"></script>
+</body>
