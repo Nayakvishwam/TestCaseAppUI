@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test case management</title>
+    <script src="../assets/tailwind.js"></script>
+    <script src="../assets/script.js"></script>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <header
+        class="w-full fixed top-0 overflow-hidden h-12 shadow-md flex text-center gap-4 border border-black text-white"
+        style="background:linear-gradient(180deg,#003f50 41%,rgb(0,12,80) 99.79588963963964%)">
+        <div class="flex w-[33%] justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                <path d="m9 9.5 2 2 4-4"></path>
+            </svg>
+            <span class="ml-2 font-bold">Test</span>
+        </div>
+        <div class="flex w-[99%] max-[765px]:hidden">
+            <div class="flex justify-center cursor-pointer items-center font-bold gap-6 whitespace-nowrap"
+                style="font-size: 12px;">
+                <a href="./index.html">Home</a>
+                <a href="./integration.html">Integrations</a>
+                <a>Use Cases</a>
+                <a>Blog</a>
+                <a>FAQ</a>
+            </div>
+            <div class="flex w-[66%] justify-end items-center">
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" rel="noopener noreferrer" class="text-app-text hover:text-app-cyan transition-colors">
+                        Sign In
+                    </a>
+                    <a href="#" rel="noopener noreferrer"
+                        class="text-white px-3 py-1 rounded-md hover:bg-opacity-90 transition border border-app-cyan/30">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="min-[765px]:hidden w-[67%] flex justify-end mr-4 items-center">
+            <button class="bg-transparent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-menu h-6 w-6">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div class="w-full mt-12">
+        <p></p>
+        <div>
+            <div class="flex flex-col">
+                <footer class="bg-gray-800 text-white shadow-md">
+                    <div class="flex gap-5 w-full flex-wrap justify-center px-8 py-5">
+                        <div class="flex gap-6 justify-start">
+                            <div class="flex flex-col gap-3 justify-start max-w-[300px]">
+                                <span style="display: inline-flex;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                                        <path d="m9 9.5 2 2 4-4"></path>
+                                    </svg>
+                                    <span class="ml-2 font-bold">Test</span>
+                                </span>
+                                <span class="mt-4">
+                                    Transform your test case management with AI-powered efficiency. Automate creation,
+                                    maintenance, and organization of test cases.
+                                </span>
+                                <span style="display: inline-flex;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-mail h-5 w-5 mr-2">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    <span>contact@ozar.com</span>
+                                </span>
+                                <span style="display: inline-flex;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-map-pin h-5 w-5 mr-2">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    509, Signature 1 Tower, Ahmedabad, India
+                                </span>
+                                <span style="display: inline-flex;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-phone h-5 w-5 mr-2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    <span>+91 9999999999</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-32 flex-wrap min-w-[50%] justify-start max-w-[300px]">
+                            <div class="flex flex-col gap-3 justify-start">
+                                <span class="font-bold text-lg">Product</span>
+                                <span class="cursor-pointer">Features</span>
+                                <span class="cursor-pointer">Use Cases</span>
+                                <span class="cursor-pointer">Integrations</span>
+                            </div>
+                            <div class="flex gap-10 justify-start max-w-[300px]">
+                                <div class="flex flex-col gap-3 justify-start">
+                                    <span class="font-bold text-lg">Resources</span>
+                                    <span class="cursor-pointer">Blog</span>
+                                    <span class="cursor-pointer">FAQ</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-10 justify-start max-w-[300px]">
+                                <div class="flex flex-col gap-3 justify-start">
+                                    <span class="font-bold text-lg">Legal</span>
+                                    <span class="cursor-pointer">Privacy Policy</span>
+                                    <span class="cursor-pointer">Cookie Policy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
