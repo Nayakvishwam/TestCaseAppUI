@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test case management</title>
     <script src="./assets/tailwind.js"></script>
-    <script src="./assets/script.js"></script>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -45,7 +44,7 @@
             </div>
         </div>
         <div class="min-[765px]:hidden w-[67%] flex justify-end mr-4 items-center">
-            <button class="bg-transparent">
+            <button class="bg-transparent" id="btnmenu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-menu h-6 w-6">
@@ -56,6 +55,23 @@
             </button>
         </div>
     </header>
+    <div class="fixed min-[765px]:hidden w-full shadow-md hidden flex-col px-4 justify-start gap-4 border border-white rounded items-start text-white top-12"
+        id="smallmenu" style="background:linear-gradient(180deg,#003f50 41%,rgb(0,12,80) 99.79588963963964%)">
+        <div class="px-3 py-1 cursor-pointer mt-2"><a href="./index.html">Home</a></div>
+        <div class="px-3 py-1 cursor-pointer"><a href="./integration.html">Integrations</a></div>
+        <div class="px-3 py-1 cursor-pointer"><a href="#">Use Cases</a></div>
+        <div class="px-3 py-1 cursor-pointer"><span>Blog</span></div>
+        <div class="px-3 py-1 cursor-pointer"><span>FAQ</span></div>
+        <div class="px-3 py-1 cursor-pointer w-full">
+            <div class="w-full border border-white"></div>
+        </div>
+        <div class="px-3 py-1 cursor-pointer"><a href="./login.html">Sign In</a></div>
+        <div class="px-3 py-1 cursor-pointer w-full">
+            <a href="./signup.html" rel="noopener noreferrer"
+                class="block bg-app-blue text-black px-4 py-2 rounded-md hover:bg-opacity-90 transition text-center border border-app-cyan/30">Sign
+                Up</a>
+        </div>
+    </div>
     <div class="h-[479px] mt-12 flex justify-center items-center">
         <div class="px-6 py-3 flex flex-col w-[450px] flex-wrap border border-black rounded shadow-md">
             <div class="font-bold text-3xl text-center">
@@ -183,6 +199,7 @@
             </div>
         </div>
     </div>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
