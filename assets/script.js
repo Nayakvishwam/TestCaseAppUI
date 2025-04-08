@@ -7,5 +7,4 @@ document.getElementById("btnmenu")?.addEventListener("click", () => {
         smallmenu.classList.remove("flex");
         smallmenu.classList.add("hidden");
     }
-    // smallmenu.classList.toggle("hidden");
 });
